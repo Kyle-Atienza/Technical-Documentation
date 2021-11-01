@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>  
+
+  <div class="row">
+
+    <nav class="col-2 position-relative g-0" id="navbar">
+      <div class="container-fluid sticky-top">
+        <header>
+          <img src="" alt="">
+          <h3>HTML</h3>
+        </header>
+        <ul class="navbar-list">
+          <li>
+            <a href="#What_is_HTML?" class="nav-link">What is HTML?</a>
+          </li>
+          <li>
+            <a href="#Anatomy_of_a_HTML_element" class="nav-link">Anatomy of a HTML element</a>
+          </li>
+          <li>
+            <a href="#Anatomy_of_a_HTML_document" class="nav-link">Anatomy of a HTML document</a>
+          </li>
+          <li>
+            <a href="#Inserting_HTML_images" class="nav-link">Inserting HTML images</a>
+          </li>
+          <li>
+            <a href="#Marking_up_text" class="nav-link">Marking up text</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col g-0" id="main-doc">
+      <!-- content -->
+      <section class="main-section" id="What_is_HTML?">
+        <header>
+          <h1>What is HTML?</h1>
+        </header>
+        <article>
+          <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+          </p>
+          <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Anatomy_of_a_HTML_element">
+        <header>
+          <h2>Anatomy of a HTML element</h2>
+        </header>
+        <article>
+          <p>An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<" and ">". The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the &lt;title&gt; tag can be written as &lt;Title&gt;, &lt;TITLE&gt;, or in any other way.
+          </p>
+          <p>3 main parts of an HTML element</p>
+          <ul>
+            <li>
+              The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the paragraph begins.
+            </li>
+            <li>
+              The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
+            </li>
+            <li>
+              The content: This is the content of the element, which in this case, is just text.
+            </li>
+          </ul>
+          <code>
+            &lt;opening-tag&gt; content &lt;/closiing-tag&gt;
+          </code>
+          <p>
+            The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Anatomy_of_a_HTML_document">
+        <header>
+          <h2>Anatomy of a HTML document</h2>
+        </header>
+        <article>
+          <ul>
+            <li>
+              doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things.
+              <code>
+                &lt;!DOCTYPE html&gt;
+              </code>
+            </li>
+            <li>
+              the &lt;html&gt; element. This element wraps all the content on the entire page and is sometimes known as the root element.
+            </li>
+            <li>
+              the &lt;head&gt; element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+            </li>
+            <li>
+              This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+              <code>
+                &lt;meta charset="utf-8"&gt;
+              </code>
+            </li>
+            <li>
+              the &lt;title&gt; element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+            </li>
+            <li>
+              the &lt;body&gt; element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+            </li>
+          </ul>
+          <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &emsp;&lt;html&gt;<br>
+            &emsp;&emsp;&lt;head&gt;<br>
+            &emsp;&emsp;&emsp;&lt;meta charset="utf-8"&gt;<br>
+            &emsp;&emsp;&emsp;&lt;title>My test page&lt;/title&gt;<br>
+            &emsp;&emsp;&lt;/head&gt;<br>
+            &emsp;&emsp;&lt;body&gt;<br>
+            &emsp;&emsp;&emsp;&lt;img src="images/firefox-icon.png" alt="My test image"&gt;<br>
+            &emsp;&emsp;&lt;/body&gt;<br>
+            &emsp;&lt;/html&gt;
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Inserting_HTML_images">
+        <header>
+          <h2>Inserting HTML images</h2>
+        </header>
+        <article>
+          <p>This is the syntax for an image tag</p>
+          <code>
+            &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+          </code>
+          <p>
+            As we said before, it embeds an image into our page in the position it appears. It does this via the src (source) attribute, which contains the path to our image file.
+          </p>
+          <p>
+            We have also included an alt (alternative) attribute. In this attribute, you specify descriptive text for users who cannot see the image,
+          </p>
+          <p>
+            The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Marking_up_text">
+        <header>
+          <h2>Marking up text</h2>
+        </header>
+        <article>
+          <p>
+            Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, &lt;h1&gt;–&lt;h6&gt;, although you'll commonly only use 3 to 4 at most:
+          </p>
+          <code>
+            <h1>My main title</h1>
+            <h2>My top level heading</h2>
+            <h3>My subheading</h3>
+            <h4>My sub-subheading</h4>
+          </code>
+        </article>
+      </section>
+    </main>
+  </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
